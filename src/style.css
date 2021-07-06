@@ -1,6 +1,6 @@
 body {
   font-family: Google Sans, arial, sans-serif;
-  background: url(images/santorini.jpg);
+  background: url(images/boat.jpg);
   background-size: cover;
 }
 h1 {
@@ -38,7 +38,7 @@ ul {
   padding: 20px;
 
   border-radius: 10px;
-  background: rgba(159, 225, 255, 0.8);
+  background: rgba(252, 254, 255, 0.6);
 }
 .weather-app-wrapper {
   max-width: 600px;

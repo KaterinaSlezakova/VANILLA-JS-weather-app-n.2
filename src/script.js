@@ -10,37 +10,24 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   let days = [
-    "neděle",
-    "pondělí",
-    "úterý",
-    "středa",
-    "čtvrtek",
-    "pátek",
-    "sobota",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   let day = days[date.getDay()];
   
-  if (day = "neděle") {
-    return `v neděli ${hours}:${minutes}`;
-  }
-  if (day = "středa") {
-    return `ve středu ${hours}:${minutes}`;
-  }
-  if (day = "čtvrtek") {
-    return `ve ${day} ${hours}:${minutes}`;
-  }
-  if (day = "sobota") {
-    return `v sobotu ${hours}:${minutes}`;
-
-  } else {
-    return `v ${day} ${hours}:${minutes}`;
-  }
+    return `${day} ${hours}:${minutes}`;
+  
 }
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Ne", "Pon", "Út", "Stř", "Čtv", "Pá", "So"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 
@@ -126,7 +113,7 @@ function displayTemperature(response) {
 function search(city) {
   let apiKey = "476ec4516bf60be6018bdca6a47318a0";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}&lang=cz`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -164,7 +151,7 @@ function showPosition(position) {
   let longitude = position.coords.longitude;
   let apiKey = `476ec4516bf60be6018bdca6a47318a0`;
   let units = `metric`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}&lang=cz`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showCurrentWeather);
 }
