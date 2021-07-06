@@ -31,6 +31,17 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function formatTime (timestamp) {
+  let time = new Date (timestamp);
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -77,6 +88,7 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
+
   let temperatureElement = document.querySelector("#temperature");
 
   celsiousTemp = response.data.main.temp;
@@ -96,6 +108,12 @@ function displayTemperature(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let sunriseElement = document.querySelector("#sunrise");
+  sunriseElement.innerHTML = formatTime(response.data.sys.sunrise * 1000);
+
+  let sunsetElement = document.querySelector("#sunset");
+  sunsetElement.innerHTML = formatTime(response.data.sys.sunset * 1000);
 
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -140,8 +158,14 @@ function showCurrentWeather(response) {
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+    response.data.wind.speed);
+  
+  let sunriseElement = document.querySelector("#sunrise");
+  sunriseElement.innerHTML = formatTime(response.data.sys.sunrise * 1000);
+
+  let sunsetElement = document.querySelector("#sunset");
+  sunsetElement.innerHTML = formatTime(response.data.sys.sunset * 1000);
+
 
   getForecast(response.data.coord);
 }

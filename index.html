@@ -50,10 +50,10 @@
             </ul>
           </div>
           <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="" id="icon" class="float-left" />
-                <span class="float-left">
+            <div class="col-4 ">
+              <div class="weather-temperature">
+                <img src="" alt="" id="icon"  />
+                <span>
                   <strong id="temperature"></strong>
                   <span class="units">
                    °C
@@ -61,8 +61,8 @@
                 </span>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
+          <div class="col-4">  
+            <ul>
                 <li>
                   Humidity:
                   <span id="humidity"> </span>
@@ -73,9 +73,24 @@
                   <span id="wind"> </span>
                   km/h
                 </li>
-              </ul>
+            </ul>
+          </div>
+            <div class="col-4">
+                <ul>
+                  <li>
+                    Sunrise:
+                    <span id="sunrise"></span>
+                  </li>
+                  <li>
+                    Sunset:
+                    <span id="sunset">
+                    </span>
+                  </li>
+                </ul>
             </div>
           </div>
+         
+          
           <div class="weather-forecast" id="forecast">
         </div>
         <small class="open-source-path">
