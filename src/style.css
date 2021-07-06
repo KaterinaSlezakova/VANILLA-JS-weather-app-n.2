@@ -1,0 +1,90 @@
+body {
+  font-family: Google Sans, arial, sans-serif;
+  background: url(images/santorini.jpg);
+  background-size: cover;
+}
+h1 {
+  color: #202124;
+  font-size: 40px;
+  line-height: 40px;
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 10px;
+}
+h2 {
+  font-size: 25px;
+  line-height: 40px;
+  display: inline;
+  color: #202124;
+  font-family: 'Poppins', sans-seri;
+}
+
+li {
+  color: #202124;
+  font-size: 17px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.weather-app {
+  padding: 20px;
+
+  border-radius: 10px;
+  background: rgba(159, 225, 255, 0.8);
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature img {
+  height: 60px;
+  width: 60px;
+}
+.weather-temperature strong {
+  color: #202124;
+  line-height: 60px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 17px;
+  top: -24px;
+}
+.weather-temperature .active {
+  color: #202124;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  margin: 40px;
+}
+.weather-forecast-date {
+  font-size: 17px;
+  color: #202124;
+}
+.weather-forecast-temperatures {
+  font-size: 17px;
+}
+.weather-forecast-temp-max {
+  color: #202124;
+}
+.weather-forecast-temp-min {
+  color: #202124;
+}
